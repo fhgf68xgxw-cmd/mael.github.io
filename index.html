@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mael — Vitrine (Alternance Dév Web)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Mael</span>
+      </a>
+
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div id="menu" class="menu">
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#about">Profil</a>
+        <a href="#contact" class="btn small">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="pill reveal">Recherche d’alternance • Bachelor Développement Web (ISCOD)</p>
+          <h1 class="reveal">
+            Je construis des sites web <span class="grad">propres</span> et <span class="grad">rapides</span>.
+          </h1>
+          <p class="lead reveal">
+            Je m’appelle Mael Leon Pariel. Je suis motivé et assidu, avec des expériences en magasin,
+            logistique et services. Je recherche une alternance pour poursuivre mes études en
+            <strong>Bachelor Développement Web</strong>.
+          </p>
+
+          <div class="cta reveal">
+            <a class="btn" href="#projects">Voir mes projets</a>
+            <a class="btn ghost" href="#contact">Me contacter</a>
+          </div>
+
+          <div class="meta reveal">
+            <span>📍 Vernon (Normandie) / Île-de-France</span>
+            <span>📞 06 35 36 77 51</span>
+            <span>🎯 Alternance Développement Web</span>
+          </div>
+        </div>
+
+        <div class="hero-right reveal">
+          <div class="card glow">
+            <p class="card-title">Ce que je cherche</p>
+            <ul class="check">
+              <li>Une alternance en développement web (front / intégration)</li>
+              <li>Apprendre sur des projets concrets et livrer proprement</li>
+              <li>Monter en compétences en équipe</li>
+            </ul>
+
+            <div class="mini">
+              <div>
+                <p class="mini-k">Stack</p>
+                <p class="mini-v">Bases HTML • CSS • JavaScript</p>
+              </div>
+              <div>
+                <p class="mini-k">Soft skills</p>
+                <p class="mini-v">Rigueur • Autonomie • Client</p>
+              </div>
+            </div>
+
+            <div class="card-actions">
+              <a class="link" href="#contact">→ Envoyer un message</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">Compétences</h2>
+          <p class="reveal">Ce que je sais faire aujourd’hui, et ce que j’améliore chaque semaine.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="tile reveal">
+            <h3>Front-end</h3>
+            <p>Intégration responsive, composants UI, animations légères.</p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span><span>Intégration</span>
+            </div>
+          </article>
+
+          <article class="tile reveal">
+            <h3>Qualité</h3>
+            <p>Structure claire, code lisible, bonnes pratiques et SEO de base.</p>
+            <div class="tags">
+              <span>Accessibilité</span><span>Performance</span><span>SEO</span><span>Clean code</span>
+            </div>
+          </article>
+
+          <article class="tile reveal">
+            <h3>Entreprise</h3>
+            <p>Rapidité d’exécution, organisation, relation client (expérience Action).</p>
+            <div class="tags">
+              <span>Fiabilité</span><span>Assiduité</span><span>Équipe</span><span>Client</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">Projet principal</h2>
+          <p class="reveal">Un projet réel, conçu et développé par moi.</p>
+        </div>
+
+        <article class="project reveal">
+          <div class="project-top">
+            <h3>DreamFR — Site vitrine & services digitaux</h3>
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive</span>
+            </div>
+          </div>
+
+          <p>
+            Conception et développement complet du site <strong>dreamfr.com</strong>.
+            Site vitrine professionnel présentant des services digitaux, une structure claire,
+            un design moderne et une navigation responsive.
+          </p>
+
+          <ul class="check">
+            <li>Structure HTML propre et sémantique</li>
+            <li>Design responsive (mobile / desktop)</li>
+            <li>Intégration CSS moderne</li>
+            <li>Logique JavaScript pour l’interactivité</li>
+          </ul>
+
+          <div class="project-actions">
+            <a class="btn" href="./redirect-dreamfr.html">
+            Visiter le site
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">Profil</h2>
+          <p class="reveal">Ce que j’apporte en alternance.</p>
+        </div>
+
+        <div class="about">
+          <div class="tile reveal">
+            <h3>À propos</h3>
+            <p>
+              Jeune motivé et assidu, avec plusieurs expériences professionnelles en magasin, en logistique et dans les services.
+              Autonome et fiable, je m’adapte aux consignes de travail et j’aime apprendre rapidement.
+            </p>
+            <p class="muted">
+              Objectif : rejoindre une équipe en alternance pour apprendre vite et contribuer sur des missions web.
+            </p>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Formation</h3>
+            <p>
+              Bachelor Développement Web – <strong>ISCOD</strong>
+            </p>
+            <p class="muted">
+              Objectif : poursuivre mes études en alternance en Bachelor Développement Web.
+              Parcours : Bac STMG (Lycée George Dumézil, 2023–2025) et DNB (Établissement Saint‑Adjutor, 2010–2023).
+            </p>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Expériences</h3>
+            <ul class="check">
+              <li><strong>Action (Saint‑Marcel)</strong> — Employé polyvalent (CDI) • 10/2025 – 01/2026</li>
+              <li><strong>Intermarché (Saint‑Marcel)</strong> — Préparateur de commande (CDD) • 08/2024 – 06/2025</li>
+              <li><strong>A Toute Heure Services (Saint‑Marcel)</strong> — Maintenance / Ménage / Réserve (CDD) • 2024–2025</li>
+              <li>Stages : Coordinateur SSI (Neo2si), Coach sportif, Dentiste • 2022–2024</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">Contact</h2>
+          <p class="reveal">Le plus simple : un message LinkedIn ou un email.</p>
+        </div>
+
+        <div class="contact">
+          <div class="tile reveal">
+            <h3>Coordonnées</h3>
+            <p class="muted">Contact direct (email/téléphone) + liens utiles.</p>
+
+            <div class="contact-links">
+              <a class="link" href="mailto:mael.re@icloud.com">mael.re@icloud.com</a>
+              <a class="link" href="tel:+33635367751">06 35 36 77 51</a>
+              <a class="link" href="./CV-MAEL%20LEON%20PARIEL.pdf" download>Télécharger mon CV (PDF)</a>
+              <a class="link" href="https://www.linkedin.com/in/mael-leon-pariel/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+
+            <p class="small muted">Réponse rapide. Disponible pour entretien.</p>
+          </div>
+
+          <form class="tile reveal" id="contactForm">
+            <h3>Message</h3>
+            <label>
+              <span>Nom</span>
+              <input required name="name" placeholder="Votre nom" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input required type="email" name="email" placeholder="votre@email.com" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea required name="message" rows="4" placeholder="Bonjour Mael, j’ai une opportunité d’alternance…"></textarea>
+            </label>
+            <button class="btn" type="submit">Envoyer</button>
+            <p class="small muted" id="formHint">Ce formulaire ouvre votre application mail (pas de backend).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <p class="muted">© <span id="year"></span> Mael — Vitrine</p>
+      <a class="link" href="#top">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
