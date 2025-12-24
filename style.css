@@ -211,54 +211,48 @@ a{color:inherit; text-decoration:none}
 
 .about{display:grid; grid-template-columns: 1.1fr .9fr; gap:16px}
 
-/* Mobile: Profile tiles swipeable (peek next card + visual hint) */
+/* Mobile: Profile tiles swipeable (clean, native – DreamFR style) */
 @media (max-width: 720px){
   .about{
-    position:relative;
     display:flex;
     gap:12px;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
+    scroll-snap-stop: always;
     -webkit-overflow-scrolling: touch;
-    padding: 0 0 14px 0;
-  }
+    overscroll-behavior-x: contain;
 
-  /* Make cards almost full width so the next one is slightly visible */
+    /* padding + margin négatif = peek naturel */
+    padding: 0 18px 12px;
+    margin: 0 -18px;
+    scroll-padding-left: 18px;
+    scroll-padding-right: 18px;
+
+    scrollbar-width: none;
+  }
+  .about::-webkit-scrollbar{ display:none; }
+
   .about > .tile{
-    min-width: 88%;
+    min-width: calc(100% - 56px); /* ~85% => on voit clairement la carte suivante */
     scroll-snap-align: start;
   }
 
-  /* Right edge fade to suggest more content */
+  /* fade ultra discret, intégré au fond */
   .about::after{
     content:"";
-    position:absolute;
-    top:0;
-    right:0;
-    width:48px;
-    height:100%;
+    position: sticky;
+    right: -18px;
+    top: 0;
+    width: 42px;
+    height: 100%;
     pointer-events:none;
-    background: linear-gradient(90deg, rgba(245,245,247,0), rgba(245,245,247,1));
+    background: linear-gradient(
+      90deg,
+      rgba(245,245,247,0),
+      rgba(245,245,247,1)
+    );
+    margin-left: -42px;
   }
-
-  /* Small swipe hint */
-  .about::before{
-    content:"Glisser →";
-    position:absolute;
-    top:-12px;
-    right:0;
-    font-size:12px;
-    color: rgba(17,17,17,.55);
-    background: rgba(245,245,247,.9);
-    border: 1px solid rgba(0,0,0,.10);
-    border-radius: 999px;
-    padding: 6px 10px;
-    pointer-events:none;
-  }
-
-  .about::-webkit-scrollbar{height:6px}
-  .about::-webkit-scrollbar-thumb{background: rgba(0,0,0,.18); border-radius:999px}
-  .about::-webkit-scrollbar-track{background: transparent}
 }
 
 .contact{display:grid; grid-template-columns: .95fr 1.05fr; gap:16px}
