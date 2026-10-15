@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mael Leon Pariel — Portfolio BTS SIO SISR</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Public+Sans:wght@400;600&family=Space+Mono&display=swap">
+<style>
+:root{--bg:#f3f5fa;--card:#fff;--ink:#0f172a;--mute:#5a6478;--accent:#2563eb;--soft:#e0e8fb;--line:#d8deeb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--card:#141b30;--ink:#eef1fa;--mute:#9aa6c0;--accent:#6ea8ff;--soft:#1c2744;--line:#26324f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1020;--card:#141b30;--ink:#eef1fa;--mute:#9aa6c0;--accent:#6ea8ff;--soft:#1c2744;--line:#26324f;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'Public Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.15}
+.mono{font-family:'Space Mono',ui-monospace,monospace;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+#loader{position:fixed;inset:0;background:var(--bg);z-index:99;display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+#loader.off{opacity:0;visibility:hidden}
+.term{font-family:'Space Mono',monospace;font-size:clamp(1rem,4vw,1.4rem);color:var(--accent)}.cur{animation:blink .8s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.van{animation:drive 1.6s ease-in-out infinite alternate}
+@keyframes drive{from{transform:translateX(-18px)}to{transform:translateX(18px)}}
+.wh{transform-box:fill-box;transform-origin:center;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav div{max-width:960px;margin:auto;padding:12px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav b{font-family:Fraunces,serif;margin-right:auto}
+nav a{color:var(--ink);text-decoration:none;font-size:.9rem}
+nav a:hover{color:var(--accent)}
+main{max-width:960px;margin:auto;padding:0 20px}
+section{padding:64px 0 8px}
+.hero{padding-top:72px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);margin:12px 0}
+.hero p{max-width:620px;color:var(--mute);font-size:1.1rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{font:600 .95rem 'Public Sans',sans-serif;padding:12px 22px;border-radius:999px;border:2px solid var(--accent);background:var(--accent);color:var(--bg);cursor:pointer;text-decoration:none;transition:transform .2s}
+.btn.alt{background:transparent;color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+h2{font-size:2rem;margin:6px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:1.15rem;margin-bottom:4px}
+.card small{color:var(--mute);display:block;margin-bottom:10px}
+.card ul{margin:0;padding-left:18px;color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--soft);color:var(--ink);padding:6px 14px;border-radius:999px;font-size:.9rem}
+.date{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--accent)}
+footer{max-width:960px;margin:64px auto 0;padding:24px 20px 40px;border-top:1px solid var(--line);color:var(--mute);font-size:.85rem}
+#redir{position:fixed;inset:0;background:var(--bg);z-index:100;display:grid;place-items:center;text-align:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}#redir.on{opacity:1;visibility:visible}#redir .bar{width:min(280px,70vw);height:6px;border-radius:9px;background:var(--soft);margin:18px auto 14px;overflow:hidden}#redir .bar i{display:block;height:100%;width:0;background:var(--accent)}#redir.on .bar i{animation:fill 1.8s linear forwards}@keyframes fill{to{width:100%}}#redir a{color:var(--mute);font-size:.8rem}
+.rv{opacity:0;transform:translateY(16px);transition:.6s}
+.rv.in{opacity:1;transform:none}
+</style></head><body>
+<div id="loader"><div class="term">$ ssh mael@portfolio<span class="cur">_</span></div></div>
+<div id="redir"><div><div class="term">$ redirection vers leonrenov.fr<span class="cur">_</span></div><div class="bar"><i></i></div><a href="https://leonrenov.fr" target="_blank" rel="noopener">Rien ne se passe ? Clique ici</a></div></div>
+<nav><div><b>Mael Leon Pariel</b><a href="#apropos">À propos</a><a href="#formation">Formation</a><a href="#projets">Projets</a><a href="#experience">Expériences</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></div></nav>
+<main>
+<section class="hero"><span class="mono">Portfolio · BTS SIO option SISR</span>
+<h1>Mael Leon Pariel</h1>
+<p>Étudiant en BTS SIO option SISR au CNED. Systèmes, réseaux et cybersécurité. Sérieux et autonome.</p>
+<div class="btns"><a class="btn" href="CV_Mael_Leon-Pariel.pdf" download>Télécharger mon CV</a><a class="btn alt" href="#contact">Me contacter</a></div></section>
+
+<section id="apropos" class="rv"><span class="mono">01 — À propos</span><h2>Rigueur et fiabilité</h2>
+<div class="card"><p style="margin:0">Je développe mes compétences en systèmes, réseaux et cybersécurité. Je m'intéresse à la sécurité des systèmes d'information et aux environnements numériques qui exigent rigueur et fiabilité.</p></div></section>
+
+<section id="formation" class="rv"><span class="mono">02 — Formation</span><h2>Parcours</h2>
+<div class="grid"><div class="card"><span class="date">2026 — 2028</span><h3>BTS SIO · option SISR</h3><small>CNED</small></div>
+<div class="card"><span class="date">2023 — 2025</span><h3>Bac STMG · spécialité Mercatique</h3><small>Lycée Georges Dumézil, Vernon</small></div></div>
+<h3 style="margin:32px 0 14px;font-size:1.3rem">Certifications</h3>
+<div class="tags"><span>Cybersecurity Fundamentals · IBM SkillsBuild</span><span>AI Fundamentals · IBM SkillsBuild</span><span>Retrieval-Augmented Generation (RAG) · IBM SkillsBuild</span><span>AI Essentials · Google</span></div></section>
+
+<section id="projets" class="rv"><span class="mono">Projets</span><h2>Ce que j'ai construit</h2>
+<div class="card"><h3>leonrenov.fr</h3><small>Site complet pour Leon Renov, entreprise de rénovation à Vernon</small><p style="margin:0 0 16px;color:var(--mute)">Conçu et développé par mes soins.</p><a class="btn" id="goLR" href="https://leonrenov.fr" target="_blank" rel="noopener">Voir le site →</a></div></section>
+
+<section id="experience" class="rv"><span class="mono">03 — Expériences</span><h2>Expériences professionnelles</h2>
+<div class="grid">
+<div class="card"><span class="date">Nov. 2025 — Janv. 2026</span><h3>Employé polyvalent · CDI</h3><small>Action, Saint Marcel</small><ul><li>Mise en rayon et réassort</li><li>Tenue et rangement du magasin</li><li>Accueil et orientation des clients</li></ul></div>
+<div class="card"><span class="date">Août 2024 — Juin 2025</span><h3>Préparateur de commandes · CDD</h3><small>Intermarché, Saint Marcel</small><ul><li>Préparation des commandes avec rigueur</li><li>Vérification des produits, respect des consignes</li><li>Respect des délais, zone de travail organisée</li></ul></div>
+<div class="card"><span class="date">Juil. 2024 — Avr. 2025</span><h3>Employé polyvalent · CDD</h3><small>À Toute Heure Services, Saint Marcel</small><ul><li>Missions de ménage</li><li>Maintenance et renfort selon les besoins</li></ul></div></div></section>
+
+<section id="competences" class="rv"><span class="mono">04 — Compétences</span><h2>Ce que je sais faire</h2>
+<div class="tags"><span>Windows et macOS</span><span>Notions en réseaux informatiques</span><span>Montage et configuration de PC</span><span>HTML/CSS</span><span>Création du site leonrenov.fr</span><span>Fondamentaux en cybersécurité</span><span>Outils bureautiques</span></div>
+<h3 style="margin:32px 0 14px;font-size:1.3rem">Langues</h3>
+<div class="tags"><span>Français · langue maternelle</span><span>Anglais · B2</span><span>Espagnol · A2</span></div></section>
+
+<section id="contact" class="rv"><span class="mono">05 — Contact</span><h2>Parlons-en</h2>
+<div class="card"><p style="margin:0 0 6px">📧 <a style="color:var(--accent)" href="mailto:mael.re@icloud.com">mael.re@icloud.com</a></p><p style="margin:0 0 6px">📞 <a style="color:var(--accent)" href="tel:+33635367551">06 35 36 75 51</a></p><p style="margin:0">📍 Vernon</p></div></section>
+</main>
+<footer>© 2026 Mael Leon Pariel · Portfolio BTS SIO SISR</footer>
+<script>
+addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('off'),1400));
+document.getElementById('goLR').addEventListener('click',e=>{e.preventDefault();document.getElementById('redir').classList.add('on');setTimeout(()=>{try{(window.top||window).location.href='https://leonrenov.fr'}catch(x){window.open('https://leonrenov.fr','_blank')}},1900)});
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
+document.querySelectorAll('.rv').forEach(s=>io.observe(s));
+</script></body></html>
