@@ -29,7 +29,7 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.15}
 .wh{transform-box:fill-box;transform-origin:center;animation:spin .6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav div{max-width:960px;margin:auto;padding:12px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav>div{max-width:960px;margin:auto;padding:12px 20px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}#menu{display:flex;gap:18px;flex-wrap:wrap}#burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:10px 9px;cursor:pointer;flex-direction:column;gap:4px}#burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s,opacity .25s}#burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}#burger.open span:nth-child(2){opacity:0}#burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}@media(max-width:720px){#burger{display:flex}#menu{display:none;width:100%;flex-direction:column;gap:0;padding-top:6px}#menu.open{display:flex}#menu a{padding:13px 4px;border-top:1px solid var(--line);font-size:1rem}}
 nav b{font-family:Fraunces,serif;margin-right:auto}
 nav a{color:var(--ink);text-decoration:none;font-size:.9rem}
 nav a:hover{color:var(--accent)}
@@ -58,7 +58,7 @@ footer{max-width:960px;margin:64px auto 0;padding:24px 20px 40px;border-top:1px 
 </style></head><body>
 <div id="loader"><div class="term">$ ssh mael@portfolio<span class="cur">_</span></div></div>
 <div id="redir"><div><div class="term">$ redirection vers leonrenov.fr<span class="cur">_</span></div><div class="bar"><i></i></div><a href="https://leonrenov.fr" target="_blank" rel="noopener">Rien ne se passe ? Clique ici</a></div></div>
-<nav><div><b>Mael Leon Pariel</b><a href="#apropos">À propos</a><a href="#formation">Formation</a><a href="#projets">Projets</a><a href="#experience">Expériences</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></div></nav>
+<nav><div><b>Mael Leon Pariel</b><button id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button><div id="menu"><a href="#apropos">À propos</a><a href="#formation">Formation</a><a href="#projets">Projets</a><a href="#experience">Expériences</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></div></div></nav>
 <main>
 <section class="hero"><span class="mono">Portfolio · BTS SIO option SISR</span>
 <h1>Mael Leon Pariel</h1>
@@ -84,7 +84,7 @@ footer{max-width:960px;margin:64px auto 0;padding:24px 20px 40px;border-top:1px 
 <div class="card"><span class="date">Juil. 2024 — Avr. 2025</span><h3>Employé polyvalent · CDD</h3><small>À Toute Heure Services, Saint Marcel</small><ul><li>Missions de ménage</li><li>Maintenance et renfort selon les besoins</li></ul></div></div></section>
 
 <section id="competences" class="rv"><span class="mono">04 — Compétences</span><h2>Ce que je sais faire</h2>
-<div class="tags"><span>Windows et macOS</span><span>Notions en réseaux informatiques</span><span>Montage et configuration de PC</span><span>HTML/CSS</span><span>Création du site leonrenov.fr</span><span>Fondamentaux en cybersécurité</span><span>Outils bureautiques</span></div>
+<div class="tags"><span>Windows et macOS</span><span>Réseaux : adressage IP, DHCP, DNS</span><span>GitHub : versionnage, GitHub Pages</span><span>Montage et configuration de PC</span><span>HTML/CSS</span><span>Création du site leonrenov.fr</span><span>Fondamentaux en cybersécurité</span><span>Outils bureautiques : Word, Excel, PowerPoint</span></div>
 <h3 style="margin:32px 0 14px;font-size:1.3rem">Langues</h3>
 <div class="tags"><span>Français · langue maternelle</span><span>Anglais · B2</span><span>Espagnol · A2</span></div></section>
 
@@ -95,6 +95,7 @@ footer{max-width:960px;margin:64px auto 0;padding:24px 20px 40px;border-top:1px 
 <script>
 addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('off'),1400));
 document.getElementById('goLR').addEventListener('click',e=>{e.preventDefault();document.getElementById('redir').classList.add('on');setTimeout(()=>{try{(window.top||window).location.href='https://leonrenov.fr'}catch(x){window.open('https://leonrenov.fr','_blank')}},1900)});
+const bg=document.getElementById('burger'),mn=document.getElementById('menu');const tg=o=>{bg.classList.toggle('open',o);mn.classList.toggle('open',o);bg.setAttribute('aria-expanded',o)};bg.addEventListener('click',()=>tg(!mn.classList.contains('open')));mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>tg(false)));
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
 document.querySelectorAll('.rv').forEach(s=>io.observe(s));
 </script></body></html>
